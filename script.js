@@ -1,17 +1,23 @@
-// Skill-Bar Animation
+// Skill bars animation
 document.addEventListener("DOMContentLoaded", () => {
-    const bars = document.querySelectorAll(".bar div");
-    bars.forEach(bar => {
-        const width = bar.getAttribute("data-width");
-        setTimeout(() => bar.style.width = width, 200);
+    document.querySelectorAll(".bar div").forEach(bar => {
+        bar.style.width = bar.getAttribute("data-width");
     });
 });
 
-// Dark/Light Mode Toggle
-let dark = true;
-document.getElementById("themeToggle").addEventListener("click", () => {
-    dark = !dark;
-    document.body.classList.toggle("light-mode", !dark);
-    document.getElementById("themeToggle").textContent = dark ? "Dark" : "Light";
-});
+// Placeholder Chatbot (wird später echte API)
+document.getElementById("chat-send").addEventListener("click", () => {
+    let input = document.getElementById("chat-input").value.trim();
+    if (!input) return;
 
+    let out = document.getElementById("chat-output");
+    out.innerHTML += "<div><b>Du:</b> " + input + "</div>";
+
+    // fake response for now
+    setTimeout(() => {
+        out.innerHTML += "<div><b>Chatbot:</b> Placeholder Antwort…</div>";
+        out.scrollTop = out.scrollHeight;
+    }, 500);
+
+    document.getElementById("chat-input").value = "";
+});

@@ -1,83 +1,110 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Tristan Trunez – Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="wrap">
 
-    <header class="header">
-        <div class="avatar">TT</div>
+<!-- FIXIERTER CHATBOT (rechts) -->
+<div id="chatbot-box">
+    <h3>Tristan-AI</h3>
+    <div id="chat-output">Chatbot Placeholder<br>Später mit GPT-API / lokalem LLM</div>
+    <input id="chat-input" placeholder="Nachricht eingeben...">
+    <button id="chat-send">Senden</button>
+</div>
+
+<header class="hero">
+    <h1>Tristan Trunez</h1>
+    <p>Medientechnik & Design – FH Hagenberg · Frontend & Fullstack</p>
+    <a class="hero-btn" href="#projects">Projekte ansehen</a>
+</header>
+
+<section class="about">
+    <h2>Über mich</h2>
+    <p>
+        Ich bin Tristan, 3. Semester Medientechnik & Design.
+        Fokus: Frontend, Fullstack, KI-Webprojekte und technische UI-Entwicklung.
+        Hobbys: Gaming, HiFi, Autos, Fitness.
+    </p>
+</section>
+
+<section id="projects" class="projects">
+    <h2>Projekte</h2>
+
+    <!-- PROJECT 1 -->
+    <div class="project">
+        <img src="images/chatbot.png" alt="Tristan-AI Chatbot Screenshot"/>
         <div>
-            <h1>Tristan Trunez</h1>
-            <p>Medientechnik & Design — FH Hagenberg • Frontend & Fullstack</p>
+            <h3>Tristan-AI Chatbot (lokal)</h3>
+            <p>
+                Personalisierter KI-Chatbot mit Meta-Llama 3.1 über LMStudio.
+                Mit System-Prompt, Profil-Wissen und Vanilla-JS UI.
+            </p>
         </div>
-        <div class="top-actions">
-            <button id="themeToggle">Dark</button>
-            <a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project">
+        <img src="images/dashboard.png" alt="Dashboard Screenshot"/>
+        <div>
+            <h3>Dashboard – Wetter · Uhr · UI</h3>
+            <p>
+                Ein modernes Dashboard mit animierter Uhr, Wetter-API, To-Do-System
+                und Skills-Anzeige. Fokus: modernes Vanilla-JS Frontend.
+            </p>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <section class="card intro">
-            <h2>Über mich</h2>
-            <p>Ich bin Tristan, 3. Semester Medientechnik & Design, mit Fokus auf Frontend und Fullstack Webentwicklung. Ich arbeite gerne mit JavaScript, Vue, HTML/CSS und APIs. Zusätzlich experimentiere ich mit lokalen KI-Modellen wie Llama über LMStudio.</p>
-        </section>
+    <!-- PROJECT 3 -->
+    <div class="project">
+        <img src="images/raumdisplay.png" alt="Raumdisplay Semesterprojekt"/>
+        <div>
+            <h3>Interaktives Raumdisplay (Semesterprojekt)</h3>
+            <p>
+                Hardware + Software Projekt für den Hort Pregarten.
+                Echtzeit-Anzeige, Sensor-Anbindung und Weboberfläche.
+            </p>
+        </div>
+    </div>
 
-        <section class="card" id="projects">
-            <h2>Projekte</h2>
+    <!-- PROJECT 4 -->
+    <div class="project">
+        <img src="images/innsmouth.png" alt="Echoes of Innsmouth Gameplay"/>
+        <div>
+            <h3>Echoes of Innsmouth – Unity Horror Game</h3>
+            <p>
+                Ein atmosphärisches Unity-Horror-Game, inspiriert von Lovecraft.
+                Level-Design, Sound, Scripting und Lighting von mir umgesetzt.
+            </p>
+        </div>
+    </div>
 
-            <div class="project">
-                <div class="thumb">Bild</div>
-                <div>
-                    <h3>Tristan-AI (lokaler Chatbot)</h3>
-                    <p>Ein personalisierter KI-Chatbot basierend auf Meta-Llama 3.1 via LMStudio, inklusive System Prompt.</p>
-                </div>
-            </div>
+</section>
 
-            <div class="project">
-                <div class="thumb">Bild</div>
-                <div>
-                    <h3>Dashboard UI</h3>
-                    <p>Ein interaktives Web-Dashboard mit animierter Uhr, Wetter, Skills und UI-Elementen (Vanilla JS).</p>
-                </div>
-            </div>
+<section class="skills">
+    <h2>Skills</h2>
 
-            <div class="project">
-                <div class="thumb">Foto</div>
-                <div>
-                    <h3>Interaktives Raumdisplay</h3>
-                    <p>Semesterprojekt mit Hardware und Web-Anbindung für den Hort Pregarten.</p>
-                </div>
-            </div>
+    <div class="skill"><span>JavaScript</span><div class="bar"><div data-width="90%"></div></div></div>
+    <div class="skill"><span>Vue</span><div class="bar"><div data-width="75%"></div></div></div>
+    <div class="skill"><span>HTML / CSS</span><div class="bar"><div data-width="85%"></div></div></div>
+    <div class="skill"><span>APIs</span><div class="bar"><div data-width="80%"></div></div></div>
+    <div class="skill"><span>Git</span><div class="bar"><div data-width="80%"></div></div></div>
+</section>
 
-        </section>
+<section class="contact">
+    <h2>Kontakt</h2>
+    <p>Linz · FH Hagenberg</p>
+    <p>E-Mail: <a href="mailto:dein.email@example.com">dein.email@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank">github.com/YOURUSERNAME</a></p>
+</section>
 
-        <section class="card">
-            <h2>Skills</h2>
-            <div class="skill"><span>JavaScript</span><div class="bar"><div data-width="90%"></div></div></div>
-            <div class="skill"><span>Vue</span><div class="bar"><div data-width="75%"></div></div></div>
-            <div class="skill"><span>HTML / CSS</span><div class="bar"><div data-width="85%"></div></div></div>
-            <div class="skill"><span>APIs</span><div class="bar"><div data-width="80%"></div></div></div>
-            <div class="skill"><span>Git</span><div class="bar"><div data-width="80%"></div></div></div>
-        </section>
-
-        <section class="card">
-            <h2>Kontakt</h2>
-            <p>Linz • FH Hagenberg</p>
-            <p>Email: <a href="mailto:dein.email@example.com">dein.email@example.com</a></p>
-        </section>
-    </main>
-
-    <footer>
-        © 2025 Tristan Trunez — Portfolio
-    </footer>
-
-</div><!-- wrap -->
+<footer>
+    © 2025 Tristan Trunez – Portfolio
+</footer>
 
 <script src="script.js"></script>
 </body>

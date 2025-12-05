@@ -1,123 +1,116 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: #0d131f;
-    color: #e7edf7;
-    padding: 20px;
+    background: #0d121b;
+    color: #e8edf5;
 }
 
-.wrap {
-    max-width: 900px;
-    margin: auto;
+h1, h2, h3 {
+    margin-top: 0;
 }
 
-.header {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.avatar {
-    width: 70px;
-    height: 70px;
+img {
+    width: 100%;
     border-radius: 12px;
-    background: linear-gradient(135deg, #406cff, #78c6ff);
-    display: flex;
-    font-weight: 700;
-    justify-content: center;
-    align-items: center;
-    color: #0d131f;
-    font-size: 24px;
 }
 
-.top-actions {
-    margin-left: auto;
-    display: flex;
-    gap: 10px;
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(180deg,#0f1724,#0b111d);
 }
 
-.top-actions a,
-.top-actions button {
-    background: #406cff;
-    padding: 8px 12px;
-    border-radius: 8px;
+.hero-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4a7aff;
     color: white;
     text-decoration: none;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
+    border-radius: 8px;
 }
 
-main {
-    display: grid;
-    gap: 20px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 16px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.06);
+.about, .projects, .skills, .contact {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
 .project {
     display: flex;
+    flex-direction: column;
     gap: 12px;
-    margin-top: 14px;
+    margin-bottom: 40px;
 }
 
-.thumb {
-    width: 110px;
-    height: 70px;
-    background: rgba(255,255,255,0.07);
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #bbb;
+.project img {
+    max-height: 350px;
+    object-fit: cover;
 }
 
-h2 { margin-top: 0; }
-
+/* SKILL BARS */
 .skill {
-    margin: 10px 0;
+    margin: 18px 0;
 }
 
 .bar {
-    height: 10px;
+    height: 12px;
     background: rgba(255,255,255,0.08);
     border-radius: 999px;
-    margin-top: 6px;
     overflow: hidden;
+    margin-top: 6px;
 }
 
 .bar div {
-    height: 10px;
-    background: linear-gradient(90deg, #406cff, #78c6ff);
+    height: 12px;
     width: 0;
-    transition: width 0.8s ease;
+    background: linear-gradient(90deg,#4a7aff,#7fc2ff);
+    transition: width 0.7s;
 }
 
-footer {
-    margin-top: 26px;
-    text-align: center;
-    color: #75809b;
+/* CHATBOT RIGHT FIXED */
+#chatbot-box {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 280px;
+    background: rgba(20,26,35,0.92);
+    padding: 16px;
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+#chat-output {
+    height: 180px;
+    padding: 6px;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    margin-bottom: 10px;
     font-size: 14px;
 }
 
-.light-mode {
-    background: #f2f5fa;
-    color: #1c1f24;
+#chat-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 6px;
 }
 
-.light-mode .card {
-    background: white;
-    border-color: #ddd;
-}
-
-.light-mode .top-actions button,
-.light-mode .top-actions a {
-    background: #406cff;
+#chat-send {
+    width: 100%;
+    padding: 8px;
+    background: #4a7aff;
     color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #788499;
 }
