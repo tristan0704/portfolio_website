@@ -5,29 +5,10 @@ body {
     color: #e8edf5;
 }
 
-h1, h2, h3 {
-    margin-top: 0;
-}
-
-img {
-    width: 100%;
-    border-radius: 12px;
-}
-
 .hero {
     padding: 100px 20px;
     text-align: center;
     background: linear-gradient(180deg,#0f1724,#0b111d);
-}
-
-.hero-btn {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 10px 20px;
-    background: #4a7aff;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
 }
 
 .about, .projects, .skills, .contact {
@@ -37,58 +18,59 @@ img {
 }
 
 .project {
+    margin-bottom: 60px;
+}
+
+.image-row {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 40px;
+    gap: 16px;
+    margin-top: 20px;
 }
 
-.project img {
-    max-height: 350px;
+.image-row img {
+    width: 33%;
+    border-radius: 10px;
     object-fit: cover;
+    height: 260px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* SKILL BARS */
-.skill {
-    margin: 18px 0;
-}
-
+/* Skill bars */
 .bar {
     height: 12px;
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.1);
     border-radius: 999px;
     overflow: hidden;
     margin-top: 6px;
 }
-
 .bar div {
     height: 12px;
     width: 0;
     background: linear-gradient(90deg,#4a7aff,#7fc2ff);
-    transition: width 0.7s;
+    transition: 0.7s;
 }
 
-/* CHATBOT RIGHT FIXED */
+/* FIXED CHATBOT */
 #chatbot-box {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    width: 280px;
+    width: 300px;
     background: rgba(20,26,35,0.92);
     padding: 16px;
     border-radius: 14px;
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255,255,255,0.08);
+    z-index: 9999;
 }
 
 #chat-output {
-    height: 180px;
-    padding: 6px;
+    height: 160px;
+    padding: 8px;
     overflow-y: auto;
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.05);
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 14px;
 }
 
 #chat-input {
@@ -103,14 +85,8 @@ img {
     width: 100%;
     padding: 8px;
     background: #4a7aff;
-    color: white;
     border: none;
     border-radius: 8px;
+    color: white;
     cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #788499;
 }
