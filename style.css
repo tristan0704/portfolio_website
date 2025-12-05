@@ -1,1 +1,123 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #0d131f;
+    color: #e7edf7;
+    padding: 20px;
+}
 
+.wrap {
+    max-width: 900px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #406cff, #78c6ff);
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: #0d131f;
+    font-size: 24px;
+}
+
+.top-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.top-actions a,
+.top-actions button {
+    background: #406cff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.project {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.thumb {
+    width: 110px;
+    height: 70px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bbb;
+}
+
+h2 { margin-top: 0; }
+
+.skill {
+    margin: 10px 0;
+}
+
+.bar {
+    height: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 999px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 10px;
+    background: linear-gradient(90deg, #406cff, #78c6ff);
+    width: 0;
+    transition: width 0.8s ease;
+}
+
+footer {
+    margin-top: 26px;
+    text-align: center;
+    color: #75809b;
+    font-size: 14px;
+}
+
+.light-mode {
+    background: #f2f5fa;
+    color: #1c1f24;
+}
+
+.light-mode .card {
+    background: white;
+    border-color: #ddd;
+}
+
+.light-mode .top-actions button,
+.light-mode .top-actions a {
+    background: #406cff;
+    color: white;
+}
