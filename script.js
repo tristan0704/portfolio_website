@@ -1,7 +1,7 @@
-// Skill bar animation
+// Skill bars animation
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".bar div").forEach(b => {
-        b.style.width = b.getAttribute("data-width");
+    document.querySelectorAll(".bar div").forEach(bar => {
+        bar.style.width = bar.getAttribute("data-width");
     });
 });
 
@@ -14,7 +14,7 @@ document.getElementById("chat-send").addEventListener("click", () => {
     out.innerHTML += `<div><b>Du:</b> ${input}</div>`;
 
     setTimeout(() => {
-        out.innerHTML += `<div><b>Chatbot:</b> Fake Antwort (Placeholder)</div>`;
+        out.innerHTML += `<div><b>Chatbot:</b> Placeholder Antwort…</div>`;
         out.scrollTop = out.scrollHeight;
     }, 300);
 
