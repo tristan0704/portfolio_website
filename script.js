@@ -1,38 +1,43 @@
-// ------------------ SKILL BARS ------------------
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".bar div").forEach(bar => {
-        bar.style.width = bar.getAttribute("data-width");
-    });
-});
+const chatWindow = document.getElementById("chat-window");
+const chatInput = document.getElementById("chat-input");
+const chatSend = document.getElementById("chat-send");
 
-// ------------------ CHATBOT ------------------
-document.getElementById("chat-send").onclick = () => {
-    let text = document.getElementById("chat-input").value.trim();
+const API_URL = "https://portfolio-website-two-blush-31.vercel.app/api/chat";
+// ↑ die echte Production-Domain
+
+function addMessage(sender, text) {
+    chatWindow.innerHTML += `<p><b>${sender}:</b> ${text}</p>`;
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+async function sendMessage() {
+    const text = chatInput.value.trim();
     if (!text) return;
 
-    let win = document.getElementById("chat-window");
+    addMessage("Du", text);
+    chatInput.value = "";
 
-    win.innerHTML += `<p><b>Du:</b> ${text}</p>`;
+    addMessage("Tristan-AI", "<i>schreibt…</i>");
 
-    setTimeout(() => {
-        win.innerHTML += `<p><b>Bot:</b> (Demo) Ich bin ein Platzhalter…</p>`;
-        win.scrollTop = win.scrollHeight;
-    }, 300);
+    const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text })
+    });
 
-    document.getElementById("chat-input").value = "";
-};
+    const data = await response.json();
 
-// ------------------ THEME TOGGLE ------------------
-const toggle = document.getElementById("theme-toggle");
-const body = document.body;
+    // Entferne das "schreibt..." zuletzt
+    chatWindow.lastChild.remove();
 
-toggle.onclick = () => {
-    body.classList.toggle("dark");
-    body.classList.toggle("light");
-
-    if (body.classList.contains("light")) {
-        toggle.textContent = "Dark Mode";
+    if (data.reply) {
+        addMessage("Tristan-AI", data.reply);
     } else {
-        toggle.textContent = "Light Mode";
+        addMessage("Tristan-AI", "Fehler: " + (data.error || "Unbekannter Fehler"));
     }
-};
+}
+
+chatSend.onclick = sendMessage;
+chatInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") sendMessage();
+});
