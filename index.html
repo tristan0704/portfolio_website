@@ -12,19 +12,26 @@
 <!-- THEME TOGGLE -->
 <button id="theme-toggle">Light Mode</button>
 
+<!-- Chatbot Toggle Button -->
+<button id="chat-toggle-btn">💬</button>
+
+
 <!-- FIXED CHATBOT -->
 <div id="chat-container">
+    <button id="chat-close">×</button>
     <h3>Tristan-AI</h3>
     <div id="chat-window">
-        <p>Chatbot Placeholder – später echte API</p>
+        <p>Hi, ich bin Tristan AI - stelle mir Fragen zu Tristan! (API Calls sind mit geringen Kosten verbunden also bitte pro Person maximal 10 Fragen)</p>
     </div>
+
     <input type="text" id="chat-input" placeholder="Nachricht eingeben…">
     <button id="chat-send">Senden</button>
 </div>
 
+
 <!-- HERO SECTION -->
 <header class="hero">
-    <img class="profile" src="https://placehold.co/250x250?text=Tristan" alt="Profilbild">
+    <img class="profile" src="pictures/profile.png" alt="Profilbild">
     <h1>Tristan Trunez</h1>
     <p>Medientechnik & Design – FH Hagenberg · Frontend & Fullstack</p>
 </header>
@@ -33,10 +40,38 @@
 <section class="about">
     <h2>Über mich</h2>
     <p>
-        Hi, ich bin Tristan – 3. Semester Medientechnik & Design.
-        Fokus: Frontend, Fullstack, Unity, KI-Webprojekte und moderne UI.
+        Hi, ich bin Tristan – 3. Semester Medientechnik & Design. <br>
+        Ich lerne ständig dazu in jedem Bereich der Medientechnik und Informatik. <br>
+        Am meisten Interesse habe ich für Frontend, Web, AI, APIs.
     </p>
 </section>
+
+<!-- SKILLS -->
+<section class="skills">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <span>Vanilla Frontend(JS,HTML,CSS)</span>
+        <div class="bar"><div data-width="70%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>Vanilla Backend Languages (PHP, Java, C#/C++)</span>
+        <div class="bar"><div data-width="60%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>Frameworks(Vue, Laravel)</span>
+        <div class="bar"><div data-width="40%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>API, Fullstack</span>
+        <div class="bar"><div data-width="30%"></div></div>
+    </div>
+</section>
+
+
 
 <!-- PROJECTS -->
 <section class="projects">
@@ -46,74 +81,41 @@
         <h3>Tristan-AI Chatbot (lokal)</h3>
         <p>Eigener lokaler KI-Chatbot mit Llama 3.1 in LMStudio.</p>
         <div class="image-row">
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
+            <img src="pictures/bot/ui.png" alt="UI" />
+            <img src="pictures/bot/code.png" alt="Code" />
+            <img src="pictures/bot/lm.png" alt="LMStudio" />
         </div>
     </div>
 
-    <div class="project">
-        <h3>Dashboard UI</h3>
-        <p>Dashboard mit Uhr, Wetter, Skills, To-Do & Animationen.</p>
-        <div class="image-row">
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
-        </div>
-    </div>
 
     <div class="project">
-        <h3>Interaktives Raumdisplay</h3>
-        <p>Semesterprojekt: Hardware + UI für den Hort Pregarten.</p>
+        <h3>Interaktives Raumdisplay + Tracking System</h3>
+        <p>Semesterprojekt (noch in Arbeit): Hardware + Backend + UI für den Hort Pregarten.(Meine Aufgaben: API, Frontend)</p>
         <div class="image-row">
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
+            <img src="pictures/lokato/ui.png" alt="UI" />
+            <img src="pictures/lokato/ui2.png" alt="UI" />
+            <img src="pictures/lokato/code_Ts.png" alt="Code" />
         </div>
     </div>
 
     <div class="project">
         <h3>Unity Game – Echoes of Innsmouth</h3>
-        <p>Horror-Game in Unity: Leveldesign, Audio, Lighting.</p>
+        <p>Horror-Walking Simulator in Unity: UI-Design, C# Coding.(Gruppen-Projekt)</p>
         <div class="image-row">
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
-            <img src="https://placehold.co/600x400" />
+            <img src="pictures/game/logo.png" alt="Logo" />
+            <img src="pictures/game/game.png" alt="Game" />
+            <img src="pictures/game/ui.png" alt="UI" />
         </div>
     </div>
 
 </section>
 
-<!-- SKILLS -->
-<section class="skills">
-    <h2>Skills</h2>
-
-    <div class="skill">
-        <span>JavaScript</span>
-        <div class="bar"><div data-width="90%"></div></div>
-    </div>
-
-    <div class="skill">
-        <span>Vue</span>
-        <div class="bar"><div data-width="75%"></div></div>
-    </div>
-
-    <div class="skill">
-        <span>HTML / CSS</span>
-        <div class="bar"><div data-width="85%"></div></div>
-    </div>
-
-    <div class="skill">
-        <span>Unity</span>
-        <div class="bar"><div data-width="70%"></div></div>
-    </div>
-</section>
 
 <!-- CONTACT -->
 <section class="contact">
     <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:dein.email@example.com">dein.email@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank">github.com/YOURUSERNAME</a></p>
+    <p>Email: <a href="mailto:tristan.trunez@outlook.de">tristan.trunez@outlook.de</a></p>
+    <p>GitHub: <a href="https://github.com/tristan0704" target="_blank">github.com/tristan0704</a></p>
 </section>
 
 <footer>© 2025 Tristan Trunez</footer>
