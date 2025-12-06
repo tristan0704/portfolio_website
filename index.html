@@ -9,113 +9,135 @@
 
 <body class="dark">
 
-<!-- THEME TOGGLE -->
+<!-- Theme Toggle -->
 <button id="theme-toggle">Light Mode</button>
 
-<!-- Chatbot Toggle Button -->
+<!-- Chat Button -->
 <button id="chat-toggle-btn">💬</button>
 
-
-<!-- FIXED CHATBOT -->
+<!-- Chat Panel -->
 <div id="chat-container">
     <button id="chat-close">×</button>
     <h3>Tristan-AI</h3>
+
     <div id="chat-window">
-        <p>Hi, ich bin Tristan AI - stelle mir Fragen zu Tristan! (API Calls sind mit geringen Kosten verbunden also bitte pro Person maximal 10 Fragen)</p>
+        <p>
+            <span class="chat-bubble chat-bot">
+                Hi, ich bin Tristan-AI! Du kannst mir Fragen zu Tristan stellen.
+            </span>
+        </p>
     </div>
 
     <input type="text" id="chat-input" placeholder="Nachricht eingeben…">
     <button id="chat-send">Senden</button>
 </div>
 
+<!-- Lightbox -->
+<div id="lightbox-overlay">
+    <img src="" alt="">
+</div>
 
-<!-- HERO SECTION -->
 <header class="hero">
     <img class="profile" src="pictures/profile.png" alt="Profilbild">
     <h1>Tristan Trunez</h1>
     <p>Medientechnik & Design – FH Hagenberg · Frontend & Fullstack</p>
 </header>
 
-<!-- ABOUT -->
 <section class="about">
     <h2>Über mich</h2>
     <p>
         Hi, ich bin Tristan – 3. Semester Medientechnik & Design. <br>
-        Ich lerne ständig dazu in jedem Bereich der Medientechnik und Informatik. <br>
-        Am meisten Interesse habe ich für Frontend, Web, AI, APIs.
+        Besonders interessiert an Web, AI, APIs, Fullstack & Frontend.
     </p>
 </section>
 
-<!-- SKILLS -->
 <section class="skills">
     <h2>Skills</h2>
 
     <div class="skill">
-        <span>Vanilla Frontend(JS,HTML,CSS)</span>
+        <span>Vanilla Frontend (JS, HTML, CSS)</span>
         <div class="bar"><div data-width="70%"></div></div>
     </div>
 
     <div class="skill">
-        <span>Vanilla Backend Languages (PHP, Java, C#/C++)</span>
+        <span>Backend Languages (PHP, Java, C#/C++)</span>
         <div class="bar"><div data-width="60%"></div></div>
     </div>
 
     <div class="skill">
-        <span>Frameworks(Vue, Laravel)</span>
+        <span>Frameworks (Vue, Laravel)</span>
         <div class="bar"><div data-width="40%"></div></div>
     </div>
 
     <div class="skill">
-        <span>API, Fullstack</span>
+        <span>API / Fullstack</span>
         <div class="bar"><div data-width="30%"></div></div>
     </div>
 </section>
 
-
-
-<!-- PROJECTS -->
 <section class="projects">
     <h2>Projekte</h2>
 
+    <!-- PROJECT 1 -->
     <div class="project">
         <h3>Tristan-AI Chatbot (lokal)</h3>
-        <p>Eigener lokaler KI-Chatbot mit Llama 3.1 in LMStudio.</p>
+        <p>Lokaler KI-Chatbot basierend auf Llama 3.1 in LMStudio. Eigenes Prompt-Design, UI und API-Konzept.</p>
+        <small><b>Technologien:</b> Llama 3.1, LMStudio, JavaScript, HTML/CSS</small>
+
+        <!-- Project Link Placeholder -->
+        <div class="project-link"><a href="#" target="_blank">→ Projekt ansehen</a></div>
+
         <div class="image-row">
-            <img src="pictures/bot/ui.png" alt="UI" />
-            <img src="pictures/bot/code.png" alt="Code" />
-            <img src="pictures/bot/lm.png" alt="LMStudio" />
+            <img src="pictures/bot/ui.png">
+            <img src="pictures/bot/code.png">
+            <img src="pictures/bot/lm.png">
         </div>
     </div>
 
-
+    <!-- PROJECT 2 -->
     <div class="project">
-        <h3>Interaktives Raumdisplay + Tracking System</h3>
-        <p>Semesterprojekt (noch in Arbeit): Hardware + Backend + UI für den Hort Pregarten.(Meine Aufgaben: API, Frontend)</p>
+        <h3>Interaktives Raumdisplay</h3>
+        <p>Semesterprojekt: API, Frontend und UI für ein Raumtracking-System für den Hort Pregarten.</p>
+        <small><b>Technologien:</b> TypeScript, REST API, Node.js, HTML/CSS</small>
+
+        <!-- Project Link Placeholder -->
+        <div class="project-link"><a href="#" target="_blank">→ Projekt ansehen</a></div>
+
         <div class="image-row">
-            <img src="pictures/lokato/ui.png" alt="UI" />
-            <img src="pictures/lokato/ui2.png" alt="UI" />
-            <img src="pictures/lokato/code_Ts.png" alt="Code" />
+            <img src="pictures/lokato/ui.png">
+            <img src="pictures/lokato/ui2.png">
+            <img src="pictures/lokato/code_Ts.png">
         </div>
     </div>
 
+    <!-- PROJECT 3 -->
     <div class="project">
         <h3>Unity Game – Echoes of Innsmouth</h3>
-        <p>Horror-Walking Simulator in Unity: UI-Design, C# Coding.(Gruppen-Projekt)</p>
+        <p>Walking-Simulator inspiriert von Lovecraft. Aufgaben: UI-Design, C# Scripting, Audio & Lighting.</p>
+        <small><b>Technologien:</b> Unity, C#, Lighting, UI Design</small>
+
+        <!-- Project Link Placeholder -->
+        <div class="project-link"><a href="#" target="_blank">→ Projekt ansehen</a></div>
+
         <div class="image-row">
-            <img src="pictures/game/logo.png" alt="Logo" />
-            <img src="pictures/game/game.png" alt="Game" />
-            <img src="pictures/game/ui.png" alt="UI" />
+            <img src="pictures/game/logo.png">
+            <img src="pictures/game/game.png">
+            <img src="pictures/game/ui.png">
         </div>
     </div>
 
 </section>
 
-
-<!-- CONTACT -->
 <section class="contact">
     <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:tristan.trunez@outlook.de">tristan.trunez@outlook.de</a></p>
-    <p>GitHub: <a href="https://github.com/tristan0704" target="_blank">github.com/tristan0704</a></p>
+    <p>Email:
+        <a href="mailto:tristan.trunez@outlook.de">tristan.trunez@outlook.de</a>
+    </p>
+    <p>GitHub:
+        <a href="https://github.com/tristan0704" target="_blank">
+            github.com/tristan0704
+        </a>
+    </p>
 </section>
 
 <footer>© 2025 Tristan Trunez</footer>
