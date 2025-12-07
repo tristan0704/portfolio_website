@@ -53,11 +53,11 @@ Grundkenntnisse / am Lernen:
 - YouTube, AI-Tools, Tutorials, Ausprobieren
 
 ### Projekte
-- Interaktives Raumdisplay für den Hort Pregarten (Hardware + Software, Semesterprojekt)
-- Tristan AI Chatbot per API und Lokalem LLM
-- Diplomarbeit bei Matura in Wordpress
-- Echoes of Innsmouth Unity Game
-- Auch kleine Projekte im Bereich UI/UX
+- Interaktives Raumdisplay für den Hort Pregarten (Hardware + Software, Semesterprojekt) Technologien: Vue, Laravel, Typescript, SQL
+- Tristan AI Chatbot per API und Lokalem LLM (JavaScript, Vercel, LM Studio)
+- Diplomarbeit bei Matura - Wordpress Website für eine Konditorei
+- Echoes of Innsmouth Unity Game (C#)
+- Auch kleine Projekte im Bereich UI/UX 
 - Besonders interessiert an Fullstack-Webprojekten
 
 ### Verhalten der KI
